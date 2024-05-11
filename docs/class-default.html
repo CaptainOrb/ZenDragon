@@ -12,37 +12,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body class="dragonclass">
+    <div class="off-screen-menu">
+        
+    </div>
     <header class="flex-container">
         <a id="title" class="click_border click_sfx" href="index.html"><img src="assets/logo_header.png"></a>
         <div class="nav-container">
             <nav class="flex-container">
                 <a class="click_border click_sfx" href="index.html">Home</a>
-                <a class="click_border click_sfx" href="character-default.html">Characters</a></li  >
+                <a class="click_border click_sfx" href="character-default.html">Characters</a></li>
                 <a class="click_border click_sfx" href="class-default.html">Dragon Class</a></li>
                 <a class="click_border click_sfx" href="isleofberk.html">Isle of Berk</a></li>
             </nav>
         </div>
         <div class="btn-container">
             <a id="register-button" class="click_sfx" href="register/register.html">REGISTER</a>
-        </div>  
+        </div>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     
-    <main id="dragonclass-selection" class="flex-container">
-        <div id="card-elder" class="card">
-            
+    <main id="dragonclass-selection">
+        <div id="selection">
+            <div id="card-elder" class="card">
+                <a href="class-elderdragon.html" class="click_sfx"><span>ELDER<br>DRAGON</span></a>
+            </div>
+            <div id="card-leviathan" class="card">
+                <a href="class-leviathan.html" class="click_sfx"><span>LEVIATHAN</span></a>
+            </div>
+            <div id="card-wyvern" class="card">
+                <a href="class-wyvern.html" class="click_sfx"><span>WYVERN</span></a>
+            </div>
+            <div id="card-unknown" class="card">
+                <a href="class-unknown.html" class="click_sfx"><span>UNKNOWN</span></a>
+            </div>
         </div>
-        <div id="card-leviathan" class="card">
-            
-        </div>
-        <div id="card-wyvern" class="card">
-            
-        </div>
-        <div id="card-unknown" class="card">
-            
-        </div>
+        <div class="carousel-btn prev-btn click_sfx_only" onclick="prevSlide()">&#10094;</div>
+        <div class="carousel-btn next-btn click_sfx_only" onclick="nextSlide()">&#10095;</div>
     </main>
+    
 
     <footer>
         <div class="flex-container">

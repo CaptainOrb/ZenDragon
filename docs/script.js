@@ -29,17 +29,17 @@ const characterDetails = {
     "the-apex": {
         name: "The Apex",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum facilis vitae cum quod at placeat, dicta magnam exercitationem animi officia aspernatur suscipit eum tenetur accusamus blanditiis quisquam nemo deleniti vero illo id minima qui. Illo cupiditate et soluta architecto eos labore quod deserunt vel expedita impedit. Vitae ullam officia earum dolorem nulla. Nemo corrupti sequi iure voluptas eveniet aperiam quis.",
-        image: "assets/char_apex.png" // Specify the image path for each character
+        image: "assets/char_apex.png"
     },
     "wesley-aldrich": {
         name: "Wesley Aldrich",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum facilis vitae cum quod at placeat, dicta magnam exercitationem animi officia aspernatur suscipit eum tenetur accusamus blanditiis quisquam nemo deleniti vero illo id minima qui. Illo cupiditate et soluta architecto eos labore quod deserunt vel expedita impedit. Vitae ullam officia earum dolorem nulla. Nemo corrupti sequi iure voluptas eveniet aperiam quis.",
-        image: "assets/char_wesley.png" // Specify the image path for each character
+        image: "assets/char_wesley.png"
     },
     "artika-chintya": {
         name: "Artika Chintya",
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum facilis vitae cum quod at placeat, dicta magnam exercitationem animi officia aspernatur suscipit eum tenetur accusamus blanditiis quisquam nemo deleniti vero illo id minima qui. Illo cupiditate et soluta architecto eos labore quod deserunt vel expedita impedit. Vitae ullam officia earum dolorem nulla. Nemo corrupti sequi iure voluptas eveniet aperiam quis.",
-        image: "assets/char_tika.png" // Specify the image path for each character
+        image: "assets/char_tika.png"
     }
 };
 
@@ -53,7 +53,6 @@ function showDetails(character) {
             <h2>${details.name}</h2>
             <p>${details.description}</p>
         `;
-        // Update the existing image
         defaultImage.src = details.image;
         defaultImage.alt = character;
     } else {
@@ -61,7 +60,6 @@ function showDetails(character) {
             <h2>Zen Academy</h2>
             <p>The Zen Academy is a place where powerful hunters are specialized to maintain the ecosystem of the Eostera. Dragons are reasonably considered monsters. While the idea of a place with monsters might sounds dystopian, the Zen Team are trained to handle the monsters without slaying any of them. This operation is for obvious reasons, namely educational purposes.</p>
         `;
-        // Reset to default image
         defaultImage.src = "assets/char_default.png";
         defaultImage.alt = "Character Selection Default Photo";
     }
@@ -92,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
             } else {
                 details.classList.remove("reveal");
-                void details.offsetWidth; // Trigger reflow to restart the animation
+                void details.offsetWidth;
                 details.classList.add("reveal");
             }
         }); 
@@ -112,13 +110,11 @@ hamMenu.addEventListener("click", () => {
     offScreenMenu.classList.toggle("active");
 });
 
-// Function to move the navbar menu and register button inside the off-screen menu
 function moveContentToOffScreen() {
     offScreenMenu.appendChild(navContainer);
     offScreenMenu.appendChild(registerButton);
 }
 
-// Function to move the navbar menu and register button back to their original positions
 function moveContentToHeader() {
     const header = document.querySelector("header");
     const btnContainer = document.querySelector(".btn-container");
@@ -127,24 +123,43 @@ function moveContentToHeader() {
     btnContainer.appendChild(registerButton);
 }
 
-// Initial move of the content to off-screen
-moveContentToOffScreen();
-
-// Event listener for window resize
 window.addEventListener("resize", () => {
-    // Check viewport width
     if (window.innerWidth > hamburgerTriggerWidth) {
-        // Move content back to header if viewport width is larger than 920px
         moveContentToHeader();
-    } else {
-        // Move content to off-screen if viewport width is less than or equal to 920px
+    }
+    else {
         moveContentToOffScreen();
     }
 }); 
 
-// Initial move of the content to off-screen
 if (window.innerWidth <= hamburgerTriggerWidth) {
     moveContentToOffScreen();
-} else {
+}
+else {
     moveContentToHeader();
+}
+
+
+var currentIndex = 0;
+var images = document.querySelectorAll('.card');
+var totalImages = images.length;
+var carouselImages = document.getElementById('selection');
+
+function nextSlide() {
+    if (currentIndex < totalImages - 1) {
+        currentIndex++;
+        updateCarousel();
+    }
+}
+
+function prevSlide() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+    }
+}
+
+function updateCarousel() {
+    var offset = currentIndex * -100 + '%';
+    carouselImages.style.transform = 'translateX(' + offset + ')';
 }
