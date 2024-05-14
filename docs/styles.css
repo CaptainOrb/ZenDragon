@@ -445,8 +445,8 @@ footer #credit {
     color: white;
     flex-grow: 1;
     width: 60%;
-    margin: 20px;
-    margin-right: 100px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .dragonclass-content .container .details h1 {
@@ -755,6 +755,12 @@ footer #credit {
             width: 160px;
         }
     }
+    .dragonclass-content .container .details h1 {
+        font-size: 30px;
+    }
+    .dragonclass-content .container .details p {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 1020px) {
@@ -779,6 +785,36 @@ footer #credit {
     }
     #dragonclass-selection #selection .card a span {
         font-size: 100px;
+    }
+    .dragonclass-content {
+        height: 800px;
+    }
+    .dragonclass-content .container {
+        flex-direction: column;
+    }
+    .dragonclass-content .container .details {
+        width: 100%;
+        height: 60%;
+        padding: 20px;
+    }
+    .dragonclass-content .container .details p {
+        margin: 16px 0;
+        padding-right: 8px;
+    }
+    .dragonclass-content .container .dragons {
+        flex-direction: row;
+        width: 95%;
+        margin: 0;
+        padding: 20px;
+        overflow-x: auto;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .dragonclass-content .container .dragons::-webkit-scrollbar {
+        height: 8px;
+    }
+    .dragonclass-content .container .dragons img {
+        max-height: 220px;
     }
 }
 
@@ -809,6 +845,12 @@ footer #credit {
         font-size: 20px;
         width: 120px;
         height: 44px;
+    }
+    .dragonclass-content .container .details h1 {
+        font-size: 28px;
+    }
+    .dragonclass-content .container .details p {
+        font-size: 18px;
     }
 }
 
@@ -906,6 +948,9 @@ footer #credit {
     }
     .carousel-btn {
         padding: 6vw 4vw;
+    }
+    .dragonclass-content .container .dragons img {
+        max-height: 180px;
     }
 }
 
