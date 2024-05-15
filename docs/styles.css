@@ -237,7 +237,6 @@ header .spacer {
 main {
     box-sizing: border-box;
     flex: 1;
-    /* min-height: 70%; */
 }
 
 footer {
@@ -637,6 +636,98 @@ footer #credit {
 }
 
 
+/* ISLE OF BERK PAGE */
+
+#island-page {
+    display: flex;
+    flex-direction: column;
+}
+
+#island-preview {
+    background-image: url("assets/isle_of_berk.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    position: relative;
+    height: 1000px;
+}
+
+#layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 140px;
+    font-family: "Jacques Francois Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    position: absolute;
+    background-color: rgba(29, 37, 58, 0.29);
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 100px;
+    padding-bottom: 18%;
+}
+
+#island-preview img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#island-detail {
+    background-color: rgba(12, 29, 58, 1);
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 160px;
+}
+
+#detail-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+    position: relative;
+}
+
+#island-desc {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    background-color: rgba(40, 67, 99, 0.66);
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 40px;
+    color: white;
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+#island-pic {
+    padding: 10% 0;
+}
+
+#island-pic img {
+    display: block;
+    width: 75%;
+    padding-left: 25%;
+    object-fit: cover; 
+}
+
 
 /* MEDIA QUERIES */
 
@@ -761,6 +852,12 @@ footer #credit {
     .dragonclass-content .container .details p {
         font-size: 20px;
     }
+    #layer {
+        font-size: 100px;
+    }
+    #island-desc {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 1020px) {
@@ -883,6 +980,16 @@ footer #credit {
     #dragonclass-selection #selection .card a span {
         font-size: 80px;
     }
+    #layer {
+        font-size: 72px;
+    }
+    #detail-container {
+        height: 600px;
+    }
+    #island-desc {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
 
 @media (max-width: 750px) {
@@ -951,6 +1058,27 @@ footer #credit {
     }
     .dragonclass-content .container .dragons img {
         max-height: 180px;
+    }
+    #layer {
+        font-size: 56px;
+    }
+    #detail-container {
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    #island-detail {
+        height: auto;
+        padding-bottom: 10%;
+    }
+    #island-desc {
+        position: static;
+        font-size: 16px;
+        line-height: 28px;
+        width: 100%;
+    }
+    #island-pic img {
+        width: 100%;
+        padding-left: 0;
     }
 }
 
@@ -1026,6 +1154,12 @@ footer #credit {
             width: 96px;
         }
     }
+    #layer {
+        font-size: 40px;
+    }
+    #island-preview {
+        height: 90vh;
+    }
 }
 
 @media (max-width: 450px) {
@@ -1075,5 +1209,9 @@ footer #credit {
             height: 88px;
             width: 88px;
         }
+    }
+    #layer {
+        font-size: 10vw;
+        padding: 10%;
     }
 }

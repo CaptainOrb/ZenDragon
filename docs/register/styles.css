@@ -267,7 +267,7 @@ textarea {
 @media (max-width: 550px) {
     .container {
         width: 90vw;
-        height: 90vh;
+        height: 80vh;
         flex-direction: column-reverse;
     }
     .left {
