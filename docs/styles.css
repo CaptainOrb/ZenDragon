@@ -18,6 +18,33 @@ a {
     text-decoration: none;
 }
 
+.back-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 80px;
+    max-height: 80px;
+    width: 6vw;
+    height: 6vw;
+    box-sizing: border-box;
+    padding: 2%;
+    font-size: 32px;
+    color: white;
+    left: 6%;
+    top: 2%;
+    border: 1px solid rgba(1, 33, 130, 0.6);
+    border-radius: 12px;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+    background-color: rgba(1, 33, 130, 0.2);
+}
+
 .click_border:hover {
     box-shadow: 0 0 9px 3px rgba(0, 140, 186, 0.5);
     border-radius: 8px;
@@ -430,6 +457,7 @@ footer #credit {
 /* DRAGON CLASS PAGE - INSIDE */
 
 .dragonclass-content {
+    position: relative;
     height: 700px;
     align-items: center;
     justify-content: center;

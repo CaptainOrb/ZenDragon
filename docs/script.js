@@ -148,15 +148,21 @@ var carouselImages = document.getElementById('selection');
 function nextSlide() {
     if (currentIndex < totalImages - 1) {
         currentIndex++;
-        updateCarousel();
     }
+    else {
+        currentIndex -= 3;
+    }
+    updateCarousel();
 }
 
 function prevSlide() {
     if (currentIndex > 0) {
         currentIndex--;
-        updateCarousel();
     }
+    else {
+        currentIndex += 3
+    }
+    updateCarousel();
 }
 
 function updateCarousel() {
