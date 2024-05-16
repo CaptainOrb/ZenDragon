@@ -19,6 +19,17 @@ function playSound() {
     sfx.play();
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('back-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+        playSound();
+        setTimeout(() => {
+            window.history.back();
+        }, 300);
+    });
+});
+
+
 // SHOW ERROR POP UP MESSAGE
 function showError(message) {
     var errorMessage = document.getElementById("errorMessage");
@@ -188,3 +199,5 @@ function isValidEmail(email) {
     }
     return false;
 }
+
+

@@ -16,6 +16,33 @@ body {
     overflow: hidden;
 }
 
+#back-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 6vw;
+    height: 6vw;
+    box-sizing: border-box;
+    padding: 2%;
+    font-size: 20px;
+    color: white;
+    left: 4%;
+    top: 4%;
+    border: 2px solid rgba(1, 33, 130, 0.6);
+    border-radius: 12px;
+}
+
+#back-btn:hover {
+    cursor: pointer;
+    background-color: rgba(1, 33, 130, 0.2);
+}
+
 .error-message {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
@@ -37,6 +64,7 @@ body {
 }
 
 .container {
+    position: relative;
     width: 880px;
     max-width: 92vw;
     height: 700px;
@@ -291,6 +319,12 @@ textarea {
     .error-message {
         font-size: 0.9rem;
     }
+    #back-btn {
+        top: 28vh;
+        left: 6vw;
+        min-height: 40px;
+        min-width: 40px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -299,5 +333,11 @@ textarea {
     }
     .error-message {
         font-size: 0.8rem;
+    }
+    #back-btn {
+        top: 21vh;
+        left: 7vw;
+        min-height: 40px;
+        min-width: 40px;
     }
 }
