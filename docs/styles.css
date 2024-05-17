@@ -671,6 +671,11 @@ footer #credit {
     flex-direction: column;
 }
 
+#redirect-link {
+    color: rgb(104, 187, 255);
+    text-decoration: underline;
+}
+
 #island-preview {
     background-image: url("assets/isle_of_berk.jpeg");
     background-size: cover;
